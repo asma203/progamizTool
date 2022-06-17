@@ -20,13 +20,14 @@ public class addCodePage extends pageBase {
 	@FindBy(css =".desktop-run-button")
 	WebElement runbtn;
 	
+	@FindBy(css =".desktop-clear-button")
+	WebElement clearOutput;
+	
 	public void clearText() {
 		textArea.click();
 		textArea.clear();
 		textArea.sendKeys(Keys.CONTROL + "a");
 		textArea.sendKeys(Keys.DELETE);
-		
-		
 	}
 	
 	public void addText(String newText) {
@@ -36,5 +37,7 @@ public class addCodePage extends pageBase {
 	public void runCode() {
 		runbtn.click();
 	}
-	
+	public void clearOutput() {
+		clearOutput.click();
+	}
 }

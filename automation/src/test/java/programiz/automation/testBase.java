@@ -19,11 +19,9 @@ public class testBase {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\asma.hamdi\\Desktop\\chromedriver102.exe");
 		driver = new ChromeDriver();
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.navigate().to("https://www.programiz.com/java-programming/online-compiler");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-
 	}
 	
 	@AfterMethod

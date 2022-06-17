@@ -1,13 +1,7 @@
 package programiz.automation;
 
-import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.Test;
-
 import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.Test;
-
 public class addCodeTest extends testBase{
 	
 	 addCodePage addCodeObject;
@@ -29,10 +23,14 @@ public class addCodeTest extends testBase{
 		 }
 	 
 	 @Test(priority=2)
-	 public void verifyCode(String code) {
-		 code = "NEw data";
-		assertTrue(text.contains("Hello Worls"));
+	 public void verifyCode() {
+		assertTrue(text.contains("Hello World"));
 		
+	 }
+	 
+	 @Test(priority=3)
+	 public void clearOutput() {
+		 addCodeObject.clearOutput();
 	 }
 
 
